@@ -4,7 +4,7 @@
 
 Study how model errors differ across groups, especially when data distributions change over time, across contexts, or across deployment populations.
 
-中文定位: 这条线能把你的 thesis 从 "domain shift" 扩展到 "谁受到错误影响", 很适合 proposal 和面试表达。
+中文定位: 这条线能把我的 thesis 从 "domain shift" 扩展到 "谁受到错误影响", 很适合 proposal 和面试表达。
 
 ## Core Questions
 
@@ -69,4 +69,3 @@ Facial age estimation is naturally connected to subgroup error because model per
 - Fairness under historical distribution shift in visual recognition
 - Monitoring subgroup error without immediate labels
 - Data-centric analysis of demographic imbalance and temporal change
-

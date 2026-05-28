@@ -4,7 +4,7 @@
 
 Study how machine learning models fail when training and deployment data differ, and how evaluation can reveal or reduce this failure.
 
-中文定位: 这是最直接连接你 thesis 的主线, 因为 historical domain shift 本质上就是数据分布随时间变化导致模型可靠性下降。
+中文定位: 这是最直接连接我的 thesis 的主线, 因为 historical domain shift 本质上就是数据分布随时间变化导致模型可靠性下降。
 
 ## Core Questions
 
@@ -75,4 +75,3 @@ Possible bridge sentence:
 - Subgroup-aware model monitoring under changing data
 - Data-centric methods for diagnosing shift in visual datasets
 - Decision-relevant reliability metrics for deployed ML systems
-

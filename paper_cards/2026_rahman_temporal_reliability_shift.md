@@ -39,7 +39,7 @@ The paper reports experiments on a temporally indexed credit-risk dataset with 1
 
 Data shift, subgroup, or authenticity setting:
 
-Temporal shift is explicit. Subgroup shift is not the main focus and would need to be added for your research direction.
+Temporal shift is explicit. Subgroup shift is not the main focus and would need to be added for my research direction.
 
 中文判断:
 
@@ -55,11 +55,11 @@ Continuous rolling retraining is important because the paper argues that selecti
 
 Does the evaluation match the real research question?
 
-Mostly yes, because the research question is deployment reliability over time. For your work, the evaluation should add subgroup-specific error and calibration.
+Mostly yes, because the research question is deployment reliability over time. For my work, the evaluation should add subgroup-specific error and calibration.
 
 中文判断:
 
-如果迁移到你的方向, 关键是加上 worst-group MAE 或 elderly-group reliability。
+如果迁移到我的方向, 关键是加上 worst-group MAE 或 elderly-group reliability。
 
 ## Main Finding
 
@@ -83,7 +83,7 @@ Yes. A natural extension is subgroup-aware temporal reliability monitoring for c
 
 中文判断:
 
-限制本身就是你的机会: 把 temporal reliability control 扩展到 subgroup-aware CV evaluation。
+限制本身就是我的机会: 把 temporal reliability control 扩展到 subgroup-aware CV evaluation。
 
 ## My Use
 
@@ -114,4 +114,3 @@ It gives a vocabulary for converting historical-cohort performance changes into 
 - [ ] Add temporal reliability control to topic map
 - [ ] Compare with subgroup performance drift methods
 - [ ] Use in proposal draft
-

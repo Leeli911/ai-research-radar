@@ -79,5 +79,4 @@ High-fit positions usually mention at least two of:
 - multimodal authenticity
 - data quality and dataset construction
 
-Do not apply only because a position says "AI" or "large language models." Look for research fit, supervision fit, and evidence that your background can become an advantage.
-
+Do not apply only because a position says "AI" or "large language models." Look for research fit, supervision fit, and evidence that my background can become an advantage.

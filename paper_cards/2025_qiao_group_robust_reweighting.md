@@ -16,7 +16,7 @@ The paper studies uneven model performance across subpopulations when group prop
 
 中文判断:
 
-这个问题很现实: 你的人脸年龄估计数据也可能缺完整 subgroup labels。
+这个问题很现实: 我的人脸年龄估计数据也可能缺完整 subgroup labels。
 
 ## Method
 
@@ -59,7 +59,7 @@ Mostly yes. It evaluates performance under subpopulation shift and group-label s
 
 中文判断:
 
-如果你做 proposal, 可以把它作为 "现有 correction 方法", 然后指出 temporal/historical shift 还没有被充分处理。
+如果我做 proposal, 可以把它作为 "现有 correction 方法", 然后指出 temporal/historical shift 还没有被充分处理。
 
 ## Main Finding
 
@@ -71,7 +71,7 @@ It suggests that group robustness can be improved without requiring complete gro
 
 中文判断:
 
-这对你的背景很实用, 因为历史数据通常标注不完美。
+这对我的背景很实用, 因为历史数据通常标注不完美。
 
 ## Limitation
 
@@ -114,4 +114,3 @@ It could inspire a correction step after diagnosing which age or demographic sub
 - [ ] Compare with thesis balancing or reweighting results
 - [ ] Add to fairness subgroup topic map
 - [ ] Consider as a method component in proposal
-

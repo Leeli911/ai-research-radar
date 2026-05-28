@@ -16,7 +16,7 @@ The paper studies model performance decay after deployment. Its key point is tha
 
 中文判断:
 
-这篇最贴你的 thesis, 因为它把 "平均性能下降" 拆成 "哪个 subgroup 受损最大"。
+这篇最贴我的 thesis, 因为它把 "平均性能下降" 拆成 "哪个 subgroup 受损最大"。
 
 ## Method
 
@@ -59,7 +59,7 @@ Yes. The method directly evaluates where decay occurs and whether the explanatio
 
 中文判断:
 
-这正是你需要的评估思路: 不只看整体 MAE, 而看哪个 group 发生了可靠性退化。
+这正是我需要的评估思路: 不只看整体 MAE, 而看哪个 group 发生了可靠性退化。
 
 ## Main Finding
 
@@ -71,7 +71,7 @@ It makes subgroup fairness under shift more actionable. Instead of only reportin
 
 中文判断:
 
-这篇可以作为你 PhD 方向的核心 reference 之一。
+这篇可以作为我 PhD 方向的核心 reference 之一。
 
 ## Limitation
 
@@ -83,7 +83,7 @@ Yes. A strong extension is to diagnose subgroup drift under partial labels, nois
 
 中文判断:
 
-你的机会是把 SHIFT 这种 diagnostic 思路迁移到 facial age estimation 和 historical visual domains。
+我的机会是把 SHIFT 这种 diagnostic 思路迁移到 facial age estimation 和 historical visual domains。
 
 ## My Use
 
@@ -114,4 +114,3 @@ It gives a method-level framing for analyzing whether age groups, demographic gr
 - [ ] Add to fairness subgroup topic map
 - [ ] Compare with thesis subgroup diagnostics
 - [ ] Use in proposal draft
-

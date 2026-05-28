@@ -52,7 +52,7 @@ Track research that connects technical model evaluation with decisions made by i
 
 ## Connection to My Background
 
-Your thesis can be framed as evidence that model evaluation must account for historical context. If a facial age estimation model changes performance across historical periods, then governance frameworks need ways to ask when a model is valid, for whom, and under what data conditions.
+My thesis can be framed as evidence that model evaluation must account for historical context. If a facial age estimation model changes performance across historical periods, then governance frameworks need ways to ask when a model is valid, for whom, and under what data conditions.
 
 ## What to Collect Daily
 
@@ -68,4 +68,3 @@ Your thesis can be framed as evidence that model evaluation must account for his
 - Governance protocols for monitoring model validity over time
 - Technical audit methods for subgroup and temporal reliability
 - Reporting standards for data shift and model limitations
-

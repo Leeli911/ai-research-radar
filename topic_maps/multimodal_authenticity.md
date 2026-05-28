@@ -4,7 +4,7 @@
 
 Study how to detect, evaluate, and govern AI-generated or manipulated multimodal content, especially images and image-text content.
 
-中文定位: 这条线和你的 CV 背景相关, 也有现实影响力。需要注意不要只追生成模型热点, 要聚焦 authenticity, provenance, evaluation, and trust。
+中文定位: 这条线和我的 CV 背景相关, 也有现实影响力。需要注意不要只追生成模型热点, 要聚焦 authenticity, provenance, evaluation, and trust。
 
 ## Core Questions
 
@@ -55,7 +55,7 @@ Study how to detect, evaluate, and govern AI-generated or manipulated multimodal
 
 ## Connection to My Background
 
-Your facial age estimation work can connect to authenticity research through visual reliability under changing image distributions. A detector trained on one generation period or image style may fail as synthetic image tools change, similar to how age estimation may fail across historical visual domains.
+My facial age estimation work can connect to authenticity research through visual reliability under changing image distributions. A detector trained on one generation period or image style may fail as synthetic image tools change, similar to how age estimation may fail across historical visual domains.
 
 ## What to Collect Daily
 
@@ -71,4 +71,3 @@ Your facial age estimation work can connect to authenticity research through vis
 - Reliability evaluation for authenticity detectors over time
 - Data-centric benchmark design for multimodal trust
 - Subgroup and false-positive analysis in AIGC detection
-
