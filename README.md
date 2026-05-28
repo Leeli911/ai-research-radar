@@ -50,6 +50,10 @@ Default writing style:
 - No hype
 - Focus on research value, method, data, evaluation, and limitations
 
+## Grounding Files
+
+Some grounding PDFs are kept locally and are not committed because they contain personal information. Codex can use them during local runs, but GitHub only stores distilled Markdown summaries.
+
 ## Core Research Lines
 
 Use these four lines to keep the radar focused:
