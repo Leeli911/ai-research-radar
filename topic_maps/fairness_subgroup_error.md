@@ -50,6 +50,8 @@ Study how model errors differ across groups, especially when data distributions 
 - Fairness metrics may change when the deployment distribution shifts.
 - Subgroup analysis can become descriptive unless connected to intervention.
 - Benchmarks often underrepresent temporal and historical change.
+- Predefined demographic groups may miss hidden failure strata in learned representations.
+- Interventions that improve visible-group fairness may still worsen worst-group reliability under later shift.
 
 ## Connection to My Background
 
@@ -62,6 +64,7 @@ Facial age estimation is naturally connected to subgroup error because model per
 - Auditing work on demographic or intersectional errors
 - Methods for robustness when subgroup labels are limited
 - Evaluation guidelines for fairness reporting
+- Hidden subgroup discovery methods that do not rely only on metadata labels
 
 ## Proposal Angles
 
@@ -69,3 +72,4 @@ Facial age estimation is naturally connected to subgroup error because model per
 - Fairness under historical distribution shift in visual recognition
 - Monitoring subgroup error without immediate labels
 - Data-centric analysis of demographic imbalance and temporal change
+- Hidden-stratification diagnosis for historically shifted visual data

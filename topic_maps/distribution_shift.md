@@ -53,6 +53,8 @@ Study how machine learning models fail when training and deployment data differ,
 - Monitoring methods often assume labels are available quickly.
 - Average accuracy can hide subgroup-specific degradation.
 - Model reliability is rarely connected to decision consequences.
+- Many drift methods still describe that change happened, but do not localize which subgroup is degrading most.
+- Intervention papers often evaluate a single correction under one shift, without testing whether the correction remains stable under later shifts.
 
 ## Connection to My Background
 
@@ -68,6 +70,7 @@ Possible bridge sentence:
 - Benchmarks that include real distribution changes
 - Methods that estimate reliability without dense labels
 - Evaluation studies showing hidden subgroup errors under shift
+- Methods for hierarchical diagnosis that connect subgroup decay to shift mechanisms
 
 ## Proposal Angles
 
@@ -75,3 +78,4 @@ Possible bridge sentence:
 - Subgroup-aware model monitoring under changing data
 - Data-centric methods for diagnosing shift in visual datasets
 - Decision-relevant reliability metrics for deployed ML systems
+- Heterogeneous deployment decay analysis instead of average drift reporting
