@@ -1,18 +1,26 @@
 # PhD Research Radar - YYYY-MM-DD
 
 Review window:
-Research focus:
+Research focus: subgroup-aware reliability diagnosis under distribution shift
 Sources checked:
-Language: English first, Chinese judgment notes
+Language: English first, Chinese conceptual notes
 
 ## 0. Daily Filter
 
-- Recent window used: last 7 days / last 30 days
-- Main research lines covered:
+- Recent window used: last 7 days / last 30 days / expanded window with reason
+- Main research identity: subgroup-aware reliability diagnosis under distribution shift
+- Conceptual chain coverage:
+  - Diagnosis:
+  - Explanation:
+  - Intervention:
+  - Monitoring:
+  - Evaluation:
 - Items excluded and why:
 - Follow-up needed:
 
-## 1. Papers Worth Reading
+## 1. Today’s 3 Selected Papers
+
+Select exactly 3 recent academic papers. Do not add optional papers unless explicitly requested.
 
 ### Paper 1
 
@@ -21,21 +29,35 @@ Link:
 Year / Venue:
 Source:
 Research line:
-Relevance score: 1 / 2 / 3
+Research function: Diagnosis / Explanation / Intervention / Monitoring / Evaluation
+Screening Score: /25 using `skills/paper_screening.md`
+Usefulness: proposal anchor / method reference / background only / reject after reading
 
-Main idea:
+#### English Summary
 
-Method:
+- Problem:
+- Method:
+- Evaluation:
+- Findings:
 
-Dataset / Evaluation:
+#### 中文解释
 
-Why it matters:
+用清楚的语言解释技术思想，不写 hype。
 
-Relation to my research:
+#### Connection to My Thesis
 
-Possible limitation:
+Explicitly connect to at least two of:
 
-中文判断:
+- aggregate metric masking
+- elderly-group degradation
+- balancing trade-offs
+- cascade fragility
+- historical domain shift
+- hidden subgroup failure
+
+#### Limitation
+
+#### Follow-up
 
 ### Paper 2
 
@@ -44,21 +66,24 @@ Link:
 Year / Venue:
 Source:
 Research line:
-Relevance score: 1 / 2 / 3
+Research function: Diagnosis / Explanation / Intervention / Monitoring / Evaluation
+Screening Score: /25 using `skills/paper_screening.md`
+Usefulness: proposal anchor / method reference / background only / reject after reading
 
-Main idea:
+#### English Summary
 
-Method:
+- Problem:
+- Method:
+- Evaluation:
+- Findings:
 
-Dataset / Evaluation:
+#### 中文解释
 
-Why it matters:
+#### Connection to My Thesis
 
-Relation to my research:
+#### Limitation
 
-Possible limitation:
-
-中文判断:
+#### Follow-up
 
 ### Paper 3
 
@@ -67,130 +92,84 @@ Link:
 Year / Venue:
 Source:
 Research line:
-Relevance score: 1 / 2 / 3
+Research function: Diagnosis / Explanation / Intervention / Monitoring / Evaluation
+Screening Score: /25 using `skills/paper_screening.md`
+Usefulness: proposal anchor / method reference / background only / reject after reading
 
-Main idea:
+#### English Summary
 
-Method:
+- Problem:
+- Method:
+- Evaluation:
+- Findings:
 
-Dataset / Evaluation:
+#### 中文解释
 
-Why it matters:
+#### Connection to My Thesis
 
-Relation to my research:
+#### Limitation
 
-Possible limitation:
+#### Follow-up
 
-中文判断:
+## 2. Emerging Trend
 
-### Optional Paper 4
+One focused trend only. It must synthesize the three selected papers.
 
-Title:
-Link:
-Year / Venue:
-Source:
-Research line:
-Relevance score: 1 / 2 / 3
+English:
 
-Main idea:
+中文:
 
-Method:
+## 3. Two Research Questions
 
-Dataset / Evaluation:
+Each question must be specific, testable, technically plausible, and naturally extend my thesis.
 
-Why it matters:
+### Question 1
 
-Relation to my research:
+English:
 
-Possible limitation:
+- Research question:
+- Why it matters:
+- Possible data:
+- Possible method:
+- Evaluation metric:
+- Thesis connection:
+- Risk or limitation:
 
-中文判断:
+中文:
 
-### Optional Paper 5
+### Question 2
 
-Title:
-Link:
-Year / Venue:
-Source:
-Research line:
-Relevance score: 1 / 2 / 3
+English:
 
-Main idea:
+- Research question:
+- Why it matters:
+- Possible data:
+- Possible method:
+- Evaluation metric:
+- Thesis connection:
+- Risk or limitation:
 
-Method:
+中文:
 
-Dataset / Evaluation:
+## 4. Personal Reflection
 
-Why it matters:
+English:
 
-Relation to my research:
+中文:
 
-Possible limitation:
+Focus on how today’s readings reshape my PhD research identity.
 
-中文判断:
+## 5. Recommended Deep Paper Card
 
-## 2. Trending Technical Discussions
+Recommended deep paper card:
 
-### Trend 1
+Reason:
 
-Topic:
-Source:
-Link:
-What people are discussing:
-Why it may matter for PhD research:
-Relation to my research lines:
-中文判断:
+Use `skills/deep_paper_reading.md` manually. Do not automatically create a full deep paper card from the daily note.
 
-### Trend 2
+## 6. Follow-up
 
-Topic:
-Source:
-Link:
-What people are discussing:
-Why it may matter for PhD research:
-Relation to my research lines:
-中文判断:
-
-### Trend 3
-
-Topic:
-Source:
-Link:
-What people are discussing:
-Why it may matter for PhD research:
-Relation to my research lines:
-中文判断:
-
-## 3. Possible Research Ideas
-
-### Idea
-
-Research question:
-
-Why this question matters:
-
-Possible method:
-
-Possible dataset:
-
-Expected evaluation:
-
-Risk or limitation:
-
-Connection to proposal or interview:
-
-中文判断:
-
-## 4. Connection to My Background
-
-This connects to my previous thesis on facial age estimation under historical domain shift because...
-
-中文总结:
-
-## 5. Follow-up Actions
-
-- [ ] Create paper cards for:
-- [ ] Add useful sources to:
-- [ ] Update topic maps:
-- [ ] Possible supervisor or lab to investigate:
-
+- [ ] Paper card recommendation:
+- [ ] Topic map update recommendation only if a stable concept emerged:
+- [ ] Source correction if any citation/link seems suspicious:
+- [ ] Deep-read priority:

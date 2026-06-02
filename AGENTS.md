@@ -48,6 +48,32 @@ The core skills are:
 - `skills/thesis_connection.md`
 - `skills/research_question_generation.md`
 - `skills/weekly_synthesis.md`
+- `skills/deep_paper_reading.md`
+
+
+## Deep Paper Reading Workflow
+
+Daily notes are for screening and direction tracking. Deep paper cards are for strategically important papers only.
+
+Use `skills/deep_paper_reading.md` only when a paper is marked as:
+
+- `Recommended for paper card`;
+- `proposal anchor`;
+- `method reference with high strategic value`;
+- `warning / limitation paper`.
+
+Do not create deep paper cards for every daily paper. Create at most two deep paper cards per week.
+
+Every deep paper card must:
+
+- identify the paper's research function in the chain `Diagnosis -> Explanation -> Intervention -> Monitoring -> Evaluation`;
+- separate `Verified from paper`, `My interpretation`, and `Needs full-paper verification`;
+- include a section titled `How I Can Use This in My Proposal`;
+- connect directly to my thesis observations;
+- keep first-person research note voice in thesis-connection sections;
+- avoid second-person wording.
+
+Topic maps should be updated only when a deep paper card produces a stable concept, not whenever a new paper is added.
 
 ## Daily Note Generation Rules
 
@@ -68,7 +94,12 @@ Daily note generation must always:
 4. Apply `skills/research_question_generation.md`:
    - generate specific, testable, technically plausible research questions.
 
-5. Maintain first-person research note voice:
+5. Add `Research function` for each selected paper:
+   - Diagnosis / Explanation / Intervention / Monitoring / Evaluation.
+
+6. Recommend at most one deep paper card at the end of each daily note. Do not automatically create the deep card.
+
+7. Maintain first-person research note voice:
    - write as my own reflective research notes;
    - use "my thesis" and "my research direction";
    - avoid direct reader-address phrasing.
@@ -82,7 +113,8 @@ Weekly synthesis must apply `skills/weekly_synthesis.md` and should:
 - identify contradictions;
 - rank strongest research opportunities;
 - update topic maps when needed;
-- reflect on how my research identity is evolving.
+- reflect on how my research identity is evolving;
+- include one short `Proposal Seed` that can be reused in PhD proposal drafting.
 
 ## Content Boundaries
 

@@ -3,169 +3,168 @@
 Week:
 Date range:
 Daily notes reviewed:
-Main research lines:
+New paper cards reviewed:
+Main research identity: subgroup-aware reliability diagnosis under distribution shift
 
-## 1. Most Important 5 Papers
+Main purpose: do not only summarize papers. Use this report to refine my PhD research direction and convert weekly reading into proposal material.
+
+## 1. What Became Clearer This Week?
+
+English:
+
+中文:
+
+Identify how my research direction changed, narrowed, or became sharper.
+
+## 2. Conceptual Chain Coverage
+
+Summarize which parts of the chain were strengthened this week.
+
+- Diagnosis:
+- Explanation:
+- Intervention:
+- Monitoring:
+- Evaluation:
+
+Gap this week:
+
+中文判断:
+
+## 3. Strongest Papers
+
+Select up to 5 papers.
 
 ### Paper 1
 
 Title:
 Link:
-Research line:
+Research function: Diagnosis / Explanation / Intervention / Monitoring / Evaluation
+Usefulness: proposal anchor / method reference / background citation / warning paper
 Why it matters:
-Main method:
-Dataset / evaluation:
+Connection to my thesis:
 Limitation:
-Use in proposal:
 中文判断:
 
 ### Paper 2
 
 Title:
 Link:
-Research line:
+Research function: Diagnosis / Explanation / Intervention / Monitoring / Evaluation
+Usefulness: proposal anchor / method reference / background citation / warning paper
 Why it matters:
-Main method:
-Dataset / evaluation:
+Connection to my thesis:
 Limitation:
-Use in proposal:
 中文判断:
 
 ### Paper 3
 
 Title:
 Link:
-Research line:
+Research function: Diagnosis / Explanation / Intervention / Monitoring / Evaluation
+Usefulness: proposal anchor / method reference / background citation / warning paper
 Why it matters:
-Main method:
-Dataset / evaluation:
+Connection to my thesis:
 Limitation:
-Use in proposal:
 中文判断:
 
 ### Paper 4
 
 Title:
 Link:
-Research line:
+Research function: Diagnosis / Explanation / Intervention / Monitoring / Evaluation
+Usefulness: proposal anchor / method reference / background citation / warning paper
 Why it matters:
-Main method:
-Dataset / evaluation:
+Connection to my thesis:
 Limitation:
-Use in proposal:
 中文判断:
 
 ### Paper 5
 
 Title:
 Link:
-Research line:
+Research function: Diagnosis / Explanation / Intervention / Monitoring / Evaluation
+Usefulness: proposal anchor / method reference / background citation / warning paper
 Why it matters:
-Main method:
-Dataset / evaluation:
+Connection to my thesis:
 Limitation:
-Use in proposal:
 中文判断:
 
-## 2. Emerging Research Trends
+## 4. Tensions or Open Problems
 
-### Trend 1
+Identify contradictions or unresolved issues, for example:
 
-Description:
-Evidence from this week:
-Why it matters:
-Risk or uncertainty:
-中文判断:
+- diagnosis vs mitigation;
+- explicit subgroups vs hidden strata;
+- balancing vs worst-group reliability;
+- representation discovery vs interpretability;
+- monitoring alerts vs decision-relevant action.
 
-### Trend 2
+Open problem 1:
 
-Description:
-Evidence from this week:
-Why it matters:
-Risk or uncertainty:
-中文判断:
+Open problem 2:
 
-### Trend 3
+Open problem 3:
 
-Description:
-Evidence from this week:
-Why it matters:
-Risk or uncertainty:
-中文判断:
+## 5. Top 3 Research Directions
 
-## 3. Possible PhD Proposal Directions
+Rank by fit with my thesis, technical feasibility, PhD proposal potential, and risk level.
 
-### Direction 1
+### Rank 1
 
 Working title:
 Research question:
-Why it matters:
+Why it ranks first:
 Possible method:
 Possible data:
 Evaluation plan:
 Fit with my background:
-Risk:
+Risk level:
 中文判断:
 
-### Direction 2
+### Rank 2
 
 Working title:
 Research question:
-Why it matters:
+Why it ranks second:
 Possible method:
 Possible data:
 Evaluation plan:
 Fit with my background:
-Risk:
+Risk level:
 中文判断:
 
-### Direction 3
+### Rank 3
 
 Working title:
 Research question:
-Why it matters:
+Why it ranks third:
 Possible method:
 Possible data:
 Evaluation plan:
 Fit with my background:
-Risk:
+Risk level:
 中文判断:
 
-## 4. Fit With My Background
+## 6. Proposal Seed
 
-How this week's materials connect to facial age estimation under historical domain shift:
+English, 120-180 words:
 
-Strongest connection:
+中文理解, 150-250 字:
 
-Weakest connection:
+This should be one reusable paragraph, not a full proposal.
 
-## 5. Best Direction This Week
+## 7. Deep Reading Queue
 
-Recommended direction:
+Create at most two deep paper cards per week.
 
-Why this is suitable:
+- Priority 1:
+- Priority 2:
+- Deferred:
 
-How to explain it in a PhD interview:
+## 8. Next Week Plan
 
-Next step:
-
-中文判断:
-
-## 6. Directions That Are Too Risky
-
-Direction:
-
-Why it is risky:
-
-What would make it more feasible:
-
-中文判断:
-
-## 7. Next Week Plan
-
-- [ ] Papers to read deeply:
+- [ ] Papers to deep-read:
 - [ ] Paper cards to create:
-- [ ] Topic maps to update:
-- [ ] Labs or supervisors to investigate:
-- [ ] Proposal paragraph to draft:
-
+- [ ] Topic maps to update only if stable concepts emerged:
+- [ ] One research question to test further:
+- [ ] Source or citation corrections:
