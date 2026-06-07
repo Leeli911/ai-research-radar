@@ -79,3 +79,10 @@ Possible bridge sentence:
 - Data-centric methods for diagnosing shift in visual datasets
 - Decision-relevant reliability metrics for deployed ML systems
 - Heterogeneous deployment decay analysis instead of average drift reporting
+
+## Week 03 Stable Additions
+
+- Treat distribution shift as a dynamic reliability surface rather than one source-target score: subgroup, time window, representation density, and uncertainty coverage can drift at different rates.
+- Add temporal validity metrics to the evaluation vocabulary: subgroup Stability Horizon, Drift Horizon, Temporal Transfer Ratio, and detection lead time.
+- Hidden-slice discovery is now part of the distribution-shift map: OOD subsets can reverse model-ranking conclusions even when aggregate OOD metrics look stable.
+- For my thesis extension, historical portrait shift should be evaluated by asking which subgroup or hidden slice degrades first, not only whether global MAE changes.

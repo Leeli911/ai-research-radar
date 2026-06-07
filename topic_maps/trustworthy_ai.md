@@ -71,3 +71,9 @@ Facial age estimation under historical domain shift is a concrete example of why
 - Decision-relevant reliability metrics for trustworthy ML
 - Data-centric diagnosis of model failures after deployment
 
+## Week 03 Stable Additions
+
+- Trustworthy monitoring should include subgroup alert timing: the useful signal is whether subgroup degradation appears before global performance changes.
+- Uncertainty-aware monitoring is now central to this map: group coverage gaps, adaptive conformal thresholds, and subgroup interval efficiency can reveal hidden reliability failure.
+- Model maintenance should be evaluated separately for population-level performance and subgroup reliability, because updates can improve global metrics while leaving subgroup gaps unresolved or worse.
+- For my thesis extension, a trustworthy age-estimation system should report residual drift, subgroup calibration, coverage gaps, and temporal validity, not only MAE.

@@ -73,3 +73,10 @@ Facial age estimation is naturally connected to subgroup error because model per
 - Monitoring subgroup error without immediate labels
 - Data-centric analysis of demographic imbalance and temporal change
 - Hidden-stratification diagnosis for historically shifted visual data
+
+## Week 03 Stable Additions
+
+- Subgroup definition should be treated as an experimental variable: age-only, age-gender, archive-period intersections, representation clusters, and hidden slices may lead to different conclusions.
+- Balancing and fairness interventions should be evaluated under shift, because a visible-group improvement can still worsen worst-group or hidden-slice reliability.
+- Subgroup reliability now includes uncertainty and calibration, not only prediction error: marginal coverage can hide group under-coverage in the same way global MAE can hide elderly-group degradation.
+- For my thesis extension, elderly-group degradation should be tested as both a visible demographic disparity and a possible symptom of deeper hidden strata.
