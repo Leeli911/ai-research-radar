@@ -80,3 +80,10 @@ Facial age estimation is naturally connected to subgroup error because model per
 - Balancing and fairness interventions should be evaluated under shift, because a visible-group improvement can still worsen worst-group or hidden-slice reliability.
 - Subgroup reliability now includes uncertainty and calibration, not only prediction error: marginal coverage can hide group under-coverage in the same way global MAE can hide elderly-group degradation.
 - For my thesis extension, elderly-group degradation should be tested as both a visible demographic disparity and a possible symptom of deeper hidden strata.
+
+## Week 04 Stable Additions
+
+- Fairness under shift is a burden-allocation problem, not only a gap-minimization problem: an intervention may move failure into coverage distortion, interval size, hidden-cluster error, or hard-example residuals.
+- Visible subgroup labels are necessary but insufficient: label-free visual concept auditing and within-subgroup shift analysis can explain failures that age/gender tables only reveal after the fact.
+- Balancing should be judged against corrected population baselines and hidden-subgroup outcomes, because coarse count balancing may leave target-mixture mismatch or within-elderly heterogeneity unresolved.
+- Subgroup reliability should report coverage-size trade-offs alongside error gaps: marginal conformal coverage may hide elderly under-coverage, while group-specific calibration may increase interval burden for some groups.

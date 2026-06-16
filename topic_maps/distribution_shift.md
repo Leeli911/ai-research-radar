@@ -86,3 +86,10 @@ Possible bridge sentence:
 - Add temporal validity metrics to the evaluation vocabulary: subgroup Stability Horizon, Drift Horizon, Temporal Transfer Ratio, and detection lead time.
 - Hidden-slice discovery is now part of the distribution-shift map: OOD subsets can reverse model-ranking conclusions even when aggregate OOD metrics look stable.
 - For my thesis extension, historical portrait shift should be evaluated by asking which subgroup or hidden slice degrades first, not only whether global MAE changes.
+
+## Week 04 Stable Additions
+
+- Distribution-shift evaluation should first check the comparison baseline: target-population mixture, finite-sample reweighting variance, and shrinkage-corrected subgroup evaluation can change whether an intervention looks helpful or harmful.
+- Shift should be modeled hierarchically, not only between named groups: elderly portraits may contain within-group period, source, image-quality, and visual-style shifts that coarse age/gender tables miss.
+- Mechanism diagnosis should come before intervention choice: hidden visual concepts, localized harmful clusters, conditional routing, and subgroup mixture mismatch can produce similar worst-group degradation.
+- For my thesis extension, balancing and cascaded routing should be evaluated under corrected target mixtures and hidden or hierarchical subgroups before I claim they truly improve elderly reliability.

@@ -77,3 +77,10 @@ Facial age estimation under historical domain shift is a concrete example of why
 - Uncertainty-aware monitoring is now central to this map: group coverage gaps, adaptive conformal thresholds, and subgroup interval efficiency can reveal hidden reliability failure.
 - Model maintenance should be evaluated separately for population-level performance and subgroup reliability, because updates can improve global metrics while leaving subgroup gaps unresolved or worse.
 - For my thesis extension, a trustworthy age-estimation system should report residual drift, subgroup calibration, coverage gaps, and temporal validity, not only MAE.
+
+## Week 04 Stable Additions
+
+- Trustworthy monitoring should track where reliability burden moves after an intervention: residual error, subgroup miscoverage, interval width, deferral rate, hidden-cluster failure, or route-specific fragility.
+- Conformal and selective-prediction guarantees need subgroup trust boundaries: a marginal guarantee is not enough if elderly or historically shifted portraits are under-covered or systematically deferred.
+- Decision-relevant reliability should connect uncertainty signals to action rules, such as manual review, abstention, interval widening, or localized recalibration, rather than only reporting a calibration number.
+- For my thesis extension, a trustworthy historical age-estimation audit should combine target-mixture baseline checks, residual diagnostics, hidden concept or cluster analysis, and subgroup coverage monitoring.
