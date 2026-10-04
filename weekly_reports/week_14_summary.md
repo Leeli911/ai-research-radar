@@ -1,171 +1,131 @@
-# Weekly Research Summary - Week 14
+# Weekly Research Summary — Week 14
 
-Week: 14 in the repository report sequence, not the ISO calendar week
-Calendar window: 2026-09-28 to 2026-10-04
-Coverage through: 2026-09-30, Asia/Shanghai; partial-week synthesis
-Daily notes reviewed: [2026-09-30](/Users/apple/Documents/Codex/2026-05-28/codex-phd-research-radar-1-2/ai-research-radar/daily_notes/2026-09-30.md), containing three selected papers
-Missing elapsed-day notes: 2026-09-28 and 2026-09-29; October 1–4 are still future dates
-New paper cards reviewed: none
-Topic maps updated: none
-Main research identity: diagnosing subgroup reliability under shift and matching intervention strength to available target evidence
+Calendar window: **2026-09-28–2026-10-04**, Asia/Shanghai. Week 14 follows the repository sequence, not ISO numbering. Updated through October 4; this replaces the September 30 partial synthesis for the same window.
 
-**Evidence boundary / 证据边界:** I synthesize all available notes in the current week: one note, not a week of independent observations. Repetition below means convergence across its three papers, not a demonstrated field-wide trend. I rechecked their primary arXiv abstracts and metadata on September 30; full-paper assumptions remain to be verified. My historical age-regression experiments are proposals, not reported results. No notes exist for September 14–27, so I do not infer developments during that gap.
+**Coverage / 阅读范围:** I reviewed all five available daily notes: [September 30](/Users/apple/Documents/Codex/2026-05-28/codex-phd-research-radar-1-2/ai-research-radar/daily_notes/2026-09-30.md), [October 1](/Users/apple/Documents/Codex/2026-05-28/codex-phd-research-radar-1-2/ai-research-radar/daily_notes/2026-10-01.md), [October 2](/Users/apple/Documents/Codex/2026-05-28/codex-phd-research-radar-1-2/ai-research-radar/daily_notes/2026-10-02.md), [October 3](/Users/apple/Documents/Codex/2026-05-28/codex-phd-research-radar-1-2/ai-research-radar/daily_notes/2026-10-03.md), and [October 4](/Users/apple/Documents/Codex/2026-05-28/codex-phd-research-radar-1-2/ai-research-radar/daily_notes/2026-10-04.md): 15 selected papers. September 28–29 have no notes. No new deep paper card was available for these selections; no topic maps were changed.
 
-## 1. What Became Clearer / 概念变化
+**Evidence boundary / 证据边界:** This is a synthesis of the repository's screening notes and their recorded primary-source checks, not a fresh full-paper verification or a field-wide literature survey. Paper findings below are attributed to those notes; my proposed historical age-regression transfers remain hypotheses. I ground thesis connections in the research profile and distribution-shift proposal Markdown, without claiming a fresh thesis PDF analysis. 我综合的是本周筛选记录，不把选文共性当作全领域趋势，也不把分类、医疗或模拟结果直接当作历史人像回归的保证。
 
-My [Week 13 synthesis](/Users/apple/Documents/Codex/2026-05-28/codex-phd-research-radar-1-2/ai-research-radar/weekly_reports/week_13_summary.md) emphasized validating sources, labels, and subgroup support before trusting intervention results. This week's limited reading makes that idea more operational: I need to specify what target evidence is available, what it can identify, and how much intervention it supports. External evaluation data, population summaries, and a small checked target sample are distinct evidence settings. I cannot treat them as interchangeable guarantees of elderly reliability.
+## 1. Technical Patterns / 技术主题
 
-My existing [proposal direction](/Users/apple/Documents/Codex/2026-05-28/codex-phd-research-radar-1-2/ai-research-radar/grounding/proposal_distribution_shift.md) remains relevant. Representation instability is one candidate explanation to test within a source-aware audit; this week's papers do not establish that it caused my thesis failures. The immediate advance is a more testable evaluation design, rather than a replacement research identity.
-
-中文：此前我的重点是“干预前先验证证据是否可信”。本周进一步明确：目标域究竟提供了外部评估数据、群体统计摘要，还是少量核验标签？这些证据支持的结论和干预强度不同。表征不稳定仍是待检验机制；我目前最适合推进的是跨来源评估，把隐藏的老年组退化与可获得的证据联系起来。
-
-## 2. Technical Patterns and Strongest Papers / 技术模式与核心论文
-
-### A. Distribution shift requires several evaluation axes
-
-**Verified from abstract:** [FOCUS: Benchmarking Retinal Model Generalization from Foundation Vision Encoders to Multimodal LLMs](https://arxiv.org/abs/2609.33158) evaluates retinal classification across ten datasets, considering ranking, calibration, subgroup disparities, and image quality. The authors report heterogeneous external transfer after fine-tuning and no consistently dominant model family. The arXiv record lists NeurIPS 2026 Evaluations & Datasets acceptance.
-
-**Research function:** Diagnosis → Evaluation; potential input to Monitoring. **Usefulness:** proposal anchor for evaluation design.
-
-**My interpretation:** I can test whether model rankings change when historical portraits are evaluated by archive, age group, and quality rather than pooled MAE. This connects directly to aggregate masking and subgroup degradation in my thesis. Retinal classification results do not establish which age-regression model will be best.
-
-中文：我最需要借鉴的是跨数据集、分组、校准和图像质量共同构成的评估设计。医学分类结果不能直接作为历史年龄回归的证据，但可以指导我检验整体排名是否掩盖老年组失败。
-
-### B. Adaptation strength depends on target-summary uncertainty
-
-**Verified from abstract:** [Summary-powered prediction under distribution shift](https://arxiv.org/abs/2609.30908) proposes SAGE, a one-step update using target subgroup summaries. Its step size accounts for sampling and distributional uncertainty. The comparison with entropy balancing and the asymptotic risk results depend on the paper's shift model; the abstract also reports empirical comparisons.
-
-**Research function:** Explanation → Intervention → Evaluation. **Usefulness:** method reference for examining balancing strength.
-
-**My interpretation:** My balancing failures motivate a controlled intervention-strength experiment. This paper supplies a possible statistical framing, not a retrospective explanation of why elderly error increased. I still need to verify exactly which summaries and outcome information SAGE requires; archive counts alone may not suffice to estimate its update.
-
-中文：我可以把平衡策略当作有强度、也有不确定性的干预进行检验。SAGE 尚不能解释我论文中的失败原因；实施前必须核对摘要需要哪些变量，不能默认年龄或性别计数足以完成方法。
-
-### C. Reliability monitoring needs failure evidence, not only drift signals
-
-**Verified from abstract:** [Audited Conformal Prediction for Classification under Unknown Distribution Shift](https://arxiv.org/abs/2606.14909) uses a small labeled target sample to train a failure auditor. It distinguishes a strategy with marginal coverage and improved empirical conditional performance from another with explicit group-conditional guarantees, and examines set-size trade-offs.
-
-**Research function:** Monitoring → Intervention → Evaluation. **Usefulness:** method reference and warning about pooled coverage.
-
-**My interpretation:** I can investigate residual-risk auditing for elderly portraits, but classification guarantees do not automatically transfer to regression intervals. The exact assumptions, sample splitting, and group definitions need full-paper verification. This is a June method paper read this week, not a September publication.
-
-中文：监控需要区分分布变化与实际失败风险，也需要区分整体覆盖率、特定组覆盖率和任意条件覆盖率。我的回归扩展只能作为待验证设计，不能直接继承分类论文的保证。
-
-**Repeated pattern / 重复主题:** Across these readings, I see target-specific evaluation and limits on pooled reliability claims. The genuinely new connection for my notes is that the form and quality of target evidence should constrain the intervention I attempt. This remains a candidate synthesis from one day's reading.
-
-## 3. Strongest Connections to My Thesis / 与硕士论文的连接
-
-| My thesis observation | My proposed reinterpretation | Test that could challenge it |
+| Repeated pattern | Evidence across the reading | My research implication |
 | --- | --- | --- |
-| Aggregate MAE masked elderly failure | Pooling across archives and quality strata may add another layer of masking. | Compare global, elderly, and archive-specific elderly MAE on identical held-out portraits; inspect model-ranking reversals. |
-| Balancing sometimes worsened elderly performance | Correction strength or poor within-group support may matter alongside marginal counts. | Vary balancing strength on a fixed evaluation population; report effective sample size and elderly error across seeds. |
-| Cascaded conditional models were fragile | Routing errors and downstream age errors may respond differently to source shift. | Evaluate route-specific residuals and, where trustworthy gender labels exist, compare predicted versus reference routing as a diagnostic. |
-| Simpler regression generalized better | A stable base model may offer a useful starting point for a limited reliability correction. | Compare frozen regression, a simple residual correction, and the cascade under matched target evidence and held-out evaluation. |
+| Shift changes several different objects | Sep 30: FOCUS cross-dataset evaluation and SAGE target summaries; Oct 1: GUARD source compatibility; Oct 2: between-/within-group robustness; Oct 3: evaluation-mixture sensitivity | I separate age prevalence, within-age visual conditions, and label/source validity rather than calling every change demographic imbalance. |
+| Better summaries need not mean better elderly outcomes | Oct 1: subgroup utility and cumulative disparity; Oct 2: fixed confidence and training-run averages; Oct 3: error ranks and multiplicity | I report absolute elderly error, error tails, and uncertainty alongside aggregate scores, gaps, and model rankings. |
+| Intervention strength depends on evidence | Sep 30: SAGE and ACP; Oct 1: GUARD; Oct 2: learned robustness parameters | I compare modest corrections with unchanged regression at matched target-label and validation budgets. More source data or stronger balancing is not automatically more protection. |
+| Monitoring signals answer different hypotheses | Oct 2: fixed-confidence blind spots; Oct 4: WATCH, risk-violation testing, and proxy-based TTA monitoring | I distinguish input change, failure of adaptation assumptions, and unacceptable observed risk. Quiet confidence monitoring cannot certify elderly reliability. |
+| A warning needs independent confirmation | Oct 2: seed versus sampling variation; Oct 3: unstable subgroup rankings and query access; Oct 4: label timing and sequential assumptions | I separate effect magnitude, statistical support, and actionable evidence. Model-output queries cannot substitute for checked age labels. |
 
-中文：我把这些解释保留为可证伪假设。跨来源关联不能直接证明来源造成退化；平衡失败也可能来自标签噪声、样本支持不足或训练差异。简单回归是重要基线，但本周阅读不能证明它总是更好。
+中文：本周的共同技术主线是把“变化了什么、改善了谁、证据有多稳”分开。年龄组成变化不等于组内图像变难；差距缩小不等于老年组改善；置信度稳定不等于误差稳定；风险大也不等于小样本已经足以支持确定结论。
 
-## 4. Contradictions and Open Problems / 矛盾与未决问题
+## 2. Conceptual Shifts / 概念变化
 
-- **Population improvement versus elderly protection:** A target-average improvement need not reduce elderly error. I will report both and treat subgroup harm as an outcome, not assume that a population objective protects every group.
-- **Summary access versus label access:** Summary-based adaptation and a labeled-target auditor have different information budgets. I will evaluate them in separate evidence settings, with matched-budget comparisons within each setting.
-- **Auditing versus balancing:** An auditor detects risk; balancing changes a predictor. I will measure detection quality for auditors and prediction changes for interventions, then compare complete policies on the same untouched test set. A single “auditing beats balancing” score would obscure the distinction.
-- **Coverage versus usefulness:** Wider intervals can raise coverage without improving point predictions. I will pair group coverage with interval width and MAE, and keep empirical improvements separate from formal guarantees.
+My [Week 13 report](/Users/apple/Documents/Codex/2026-05-28/codex-phd-research-radar-1-2/ai-research-radar/weekly_reports/week_13_summary.md) emphasized evidence validity. The September 30 partial report translated this into matching intervention strength to target evidence. Four further notes sharpen that direction into **specifying what a reliability claim measures and what evidence can support it**.
 
-中文：核心矛盾是总体收益不等于老年组保护、不同方法获得的信息不同、诊断与修正的目标不同，以及覆盖率提升可能伴随区间负担增加。这些问题需要由实验协议明确区分。
+I now need to declare five things before claiming improvement: the target population, the loss or decision consequence, the subgroup, the observation horizon, and the information available to the method. A global-MAE improvement, a smaller disparity, a stable uncertainty histogram, and a valid risk alarm are different claims. Representation instability remains a possible mechanism from my proposal; this week's reading does not establish it as the cause of my elderly failures.
 
-## 5. Conceptual Chain Coverage / 研究链条
+中文：我的方向从“证据决定干预强度”进一步变为“先定义可靠性结论，再判断证据是否足够”。我需要明确总体、损失、子群、时间范围和可用信息。表征不稳定仍是待检验机制，不能因为方向吻合就认定它解释了 thesis 的结果。
 
-- **Diagnosis:** source-held-out residual panels can localize masking.
-- **Explanation:** summary uncertainty, limited subgroup support, and routing fragility remain competing hypotheses.
-- **Intervention:** I can compare bounded balancing or correction strengths after diagnosis.
-- **Monitoring:** residual-risk auditing is promising when checked target labels exist; unlabeled drift alone cannot confirm elderly error.
-- **Evaluation:** the common endpoint is held-out subgroup error and uncertainty quality under a declared evidence budget.
+## 3. Strongest Connections to My Thesis / 与硕士研究的连接
 
-**Gap / 缺口:** I have no new experiment, verified regression guarantee, or temporal alert result. 当前链条在评估设计上最强，在机制验证和真正的提前预警上仍缺证据。
+- **Aggregate masking:** My global MAE can hide elderly mean error, severe underestimation, or archive-specific failure. The new extension is to check masking inside equal-uncertainty bins and across time as well. I must not merge these distinct aggregation axes into a single fairness score.
+- **Balancing instability:** I distinguish an actual change in within-group residuals after retraining from a ranking change caused only by evaluation weights. SAGE and learned robustness motivate partial correction; neither establishes why my original resampling harmed elderly portraits.
+- **Subgroup degradation:** I pair elderly error severity with sample counts, uncertainty, and cross-archive replication. An underpowered test does not demonstrate safety; the largest point estimate does not establish a stable worst group.
+- **Cascade fragility and simpler regression:** I retain simple regression as the baseline and compare both error and how detectable that error is. Gate confidence, head uncertainty, and end-to-end age error are separate quantities. Routing causality needs controlled analysis, not only an association between cascade use and poor performance.
 
-## 6. Top 3 Research Directions / 研究方向排序
+中文：我最强的 thesis 连接是把老年组失败拆成误差、评估组成、证据精度和可监测性四个问题。平衡与级联都要在相同人物和档案上配对比较；简单回归的优势需要跨档案、跨种子复查，而不是被提升为普遍定律。
 
-I apply the weekly rubric explicitly. These are planning judgments, not measured scores; data access and publication novelty remain unverified.
+## 4. Contradictions and Boundaries / 矛盾与边界
 
-| Rank and direction | Thesis / strategic fit | Technical feasibility | Proposal potential | Novelty | Data availability | Long-term identity fit |
-| --- | --- | --- | --- | --- | --- | --- |
-| 1. Cross-source audit of elderly age reliability | Very high | High if predictions and source IDs are recoverable | High: clear failure and evaluation target | Moderate; needs contribution beyond metric reporting | Thesis artifacts are a candidate, access unchecked | Very high |
-| 2. Balancing strength under uncertain target summaries | Very high | Moderate; summary sufficiency must be checked | High: directly tests intervention backfire | Promising empirical question; literature check needed | Requires reliable summaries and held-out labels | High |
-| 3. Target-label budgets for residual-risk auditing | High | Moderate; splitting reduces scarce subgroup support | High, but regression validation adds work | Uncertain relative to existing regression auditing | Requires a separately checked target sample | High |
+These are tensions between objectives and assumptions, not necessarily contradictory empirical results.
 
-### Rank 1 — Cross-source audit of elderly age reliability
+1. **Smaller disparity versus lower harm:** The October 1 retraining note reports that gaps can shrink while both groups deteriorate. I require absolute elderly loss alongside every disparity result.
+2. **Robustness gains versus average performance:** The October 2 bilevel-robustness note records a worst-group/average trade-off. I preserve the trade-off rather than report a universal improvement; validation-selected protection may itself fail on a new archive.
+3. **Stable confidence versus reliable proxies:** The October 2 confidence paper motivates blind-spot tests; October 4 proxy monitoring depends on proxy validity. These are compatible: I must test the assumption within elderly cases before using the proxy.
+4. **Large subgroup warning versus reproducibility:** The October 3 multiplicity note records weak power, unstable rankings, and failure of the near-optimality condition. I use it as a limitation reference, not a validated index to adopt.
+5. **Adaptation alarm versus risk alarm:** WATCH can reject an adaptation-compatible null when weights or assumptions fail; this does not uniquely identify harmful concept drift. Observed-loss risk tests require labels, while proxy tests depend on additional assumptions.
+6. **Coverage versus useful intervals:** ACP's classification and audit-group results do not automatically protect elderly regression intervals. I retain coverage and width together and verify target calibration assumptions before transfer.
 
-- **Research question:** Does source-held-out evaluation change the ranking of simple regression, balanced models, and cascaded models when elderly MAE replaces global MAE as the primary outcome?
-- **Why it matters:** This is the closest, most feasible extension of my thesis and supplies the baseline for the other directions.
-- **Possible data:** Original predictions or rerunnable models, reference ages and their provenance, person IDs, archive IDs, and quality metadata if recoverable.
-- **Possible method:** Predefine elderly groups and source splits; prevent portraits of the same person entering both development and evaluation. Compare all models on the same targets, with quality and label-confidence sensitivity checks. Audit embeddings only as an optional explanatory follow-up.
-- **Evaluation metric:** Global and elderly MAE; worst-source elderly MAE with cell counts and uncertainty; signed residual mean using predicted minus reference age; frequency of ranking reversals. Estimate paired model differences with resampling at the independent person level where applicable.
-- **Thesis connection:** Directly tests masking, subgroup degradation, balancing instability, and cascade fragility.
-- **Risk or limitation:** Source and age composition may be confounded; sparse archive-age cells may prevent stable rankings. Without recoverable source IDs, I cannot claim a cross-source benchmark.
+中文：这些张力要求我分别报告绝对损失、组间差距、平均与最差组权衡、代理有效性和证据精度。没有告警不能当作安全证明；分类覆盖保证不能直接移植到年龄区间。
 
-中文：我优先检验“按老年组和来源重新评估后，模型排名是否变化”。这最贴近已有经验，也能为后续方法提供共同基线；若来源元数据不可恢复，跨来源结论就不能成立。
+## 5. Top 3 Research Directions / 三个优先方向
 
-### Rank 2 — Balancing strength under uncertain target summaries
+I apply the weekly ranking rubric explicitly. Ratings are planning judgments; data availability and publication novelty remain unverified.
 
-- **Research question:** At fixed evaluation composition, does partial age/gender reweighting reduce elderly error more consistently than full target-summary matching as summary noise increases?
-- **Why it matters:** It turns my balancing backfire into a narrow, falsifiable intervention question.
-- **Possible data:** Source training examples, target summaries with documented provenance, and target development/test labels kept separate. Simulated summary noise is a controlled stress test, not evidence of actual archive noise.
-- **Possible method:** Compare no weighting, naive balancing, full entropy balancing, and a predeclared grid interpolating between unit and balanced weights. Select strength using development evidence only. Add SAGE only after confirming summary requirements and applicable assumptions; my interpolation baseline is not a SAGE implementation.
-- **Evaluation metric:** Change in elderly and global MAE, worst-source elderly error, variability across seeds, and weighted effective sample size, (sum of weights)^2 / sum of squared weights.
-- **Thesis connection:** Tests whether correction strength and sample support help explain balancing instability.
-- **Risk or limitation:** Matching observed summaries cannot repair all conditional shifts. Poor overlap can make even partial weighting unstable; using test-derived summaries or labels outside the declared access setting would invalidate the comparison.
+| Rank | Direction | Thesis / strategic fit | Feasibility | Proposal potential | Novelty | Data availability | Long-term fit |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 1 | Cross-source audit separating mixture effects from elderly error | Very high | High if saved predictions survive | High; concrete first study | Moderate unless it yields reproducible failure diagnosis | Predictions, true ages, person/archive IDs need checking | Very high |
+| 2 | Partial balancing under composition and within-group shift | Very high | Moderate; small-head retraining | High; directly tests backfire | Potential empirical contribution, not yet established | Training features, labels, independent archive required | Very high |
+| 3 | Evidence-valid subgroup risk monitoring | Very high | Moderate to low until labels/support are confirmed | High; clear monitoring question | Subgroup transfer and power require literature verification | Ordered replay and checked elderly labels required | Very high |
 
-中文：我先比较不加权、部分加权和完全匹配，不把自定义基线误称为 SAGE。目标是检验干预强度与摘要噪声的关系；结果若无改善，也能约束“平衡过强”这一解释。
+### Rank 1 — Cross-source audit of apparent reliability gains
 
-### Rank 3 — Target-label budgets for residual-risk auditing
+- **Research question:** With predictions fixed, can changes in elderly prevalence reverse the ranking of simple, balanced, and cascaded age models while within-elderly severe-error risk stays unchanged, and does the pattern recur across held-out archives?
+- **Why it matters:** I can separate an evaluation-mixture artifact from an actual benefit of balancing before developing another intervention.
+- **Possible data:** Saved model predictions, reference ages and provenance, person IDs, and archive IDs; access remains unconfirmed.
+- **Possible method:** Predefine age groups and an evaluation-weight grid on development data. Keep every within-group residual distribution fixed while changing test weights; repeat by archive. Separately compare actual within-group model differences on identical people. Use person-clustered paired uncertainty estimates. Add asymmetric missed-elderly costs only as declared sensitivity scenarios, not inferred social utilities.
+- **Evaluation metric:** Global/elderly MAE, signed residual mean (prediction minus reference age), severe-underestimation probability, and model-ranking reversals across the declared grid. Report cell counts and interval uncertainty.
+- **Thesis connection:** Directly tests aggregate masking and the interpretation of balancing instability while retaining cascade and simple-regression comparisons.
+- **Risk or limitation:** Mixture reweighting cannot simulate within-group visual change. Sparse archives may prevent replication; without source IDs I can perform only a mixture audit, not claim cross-source validation.
 
-- **Research question:** At a fixed target-label budget, can a residual-risk auditor improve elderly interval coverage over global and fixed-group split-conformal regression baselines without excessive interval widening?
-- **Why it matters:** This connects my residual diagnostics to a measurable uncertainty intervention.
-- **Possible data:** Frozen age predictions and available embeddings, quality/source/route features, and checked target ages. Define true-age groups for evaluation; deployment-time grouping requires observable attributes or separately validated proxies.
-- **Possible method:** Allocate separate target subsets to auditor fitting, calibration, and final testing; freeze groups before calibration. Compare budget curves under the same splits. Start with a small residual predictor and predeclared groups. Treat the regression design as an experiment, with any coverage claim conditional on its own assumptions.
-- **Evaluation metric:** Elderly and worst-source coverage deficit at a predeclared nominal level, interval width, point MAE, and auditor detection of a prespecified large-error event. Report subgroup sample sizes and uncertainty across repeated splits.
-- **Thesis connection:** Tests whether a reliability layer can expose undercoverage hidden by aggregate metrics without changing the base model.
-- **Risk or limitation:** Small elderly samples may make three-way splitting impractical; arbitrary future shifts can invalidate calibration transfer. Detection delay is a later endpoint only if authentic observation order and label-arrival times are available.
+中文：我首先固定预测，只改变评估权重，检验排名反转是否伴随真实老年误差改善。这个低成本实验能澄清“看起来更好”与“老年组确实更好”的区别，但不能模拟新的视觉条件。
 
-中文：我把少量标签用于拟合、校准和独立测试，分别衡量覆盖率、区间宽度与失败检测。没有真实时间顺序和标签延迟记录时，我只报告离线审计，不声称实现提前预警。
+### Rank 2 — Partial balancing under compound shift
+
+- **Research question:** Does validation-selected partial balancing reduce elderly MAE more consistently than full balancing when age composition and within-age image quality change together?
+- **Why it matters:** My balancing backfire needs competing mechanisms and controlled tests, rather than a retrospective explanation based only on sample counts.
+- **Possible data:** Recoverable thesis portraits or frozen features, ages, quality/source metadata, identity-disjoint splits, and one untouched archive.
+- **Possible method:** Compare unweighted, fully balanced, and a fixed five-level partial-weight grid with the same backbone and small heads. Select weights on development worst-age-group MAE under a predeclared global-error constraint. Cross composition-only, quality-only, and combined stress tests; then evaluate the untouched archive. Start with matched seeds as a variance pilot. Source-summary noise is a later factor if suitable summaries exist; this baseline is not SAGE or a bilevel-method reproduction.
+- **Evaluation metric:** Paired elderly/global MAE differences, severe underestimation, worst prespecified group error, effective sample size, and between-seed spread. Report trade-offs; a small pilot cannot estimate an extreme error quantile precisely.
+- **Thesis connection:** Tests balancing instability and whether simple versus conditional heads differ in sensitivity to the same shift.
+- **Risk or limitation:** Artificial corruption is not historical change, and weak validation support can select unstable weights. A null benefit of partial balancing would weaken the excessive-correction hypothesis rather than settle all causes.
+
+中文：我用同一骨干、固定权重网格和配对种子，把组成变化与组内质量变化分开测试。部分平衡若无优势，也能排除一种解释；验证集选择本身仍可能不稳定。
+
+### Rank 3 — Subgroup risk monitoring with declared evidence access
+
+- **Research question:** At the same total false-alarm budget, can pooled-plus-elderly monitoring detect increased severe elderly underestimation earlier than pooled-only monitoring under archive shift?
+- **Why it matters:** I can translate hidden elderly failure into a specific risk event and assess whether a monitor has enough evidence to detect it.
+- **Possible data:** Frozen predictions and independently checked ages, person/archive IDs, and real ordering where available. Otherwise I use explicitly simulated replay, not a historical deployment claim.
+- **Possible method:** Fix an elderly threshold, severe-underestimation threshold, and acceptable event probability on development data. Compare paired streams with immediate and fixed delayed labels. Allocate total alpha 0.05 across active tests, checking the individual sequential assumptions before claiming family-wise control. Compare balanced/unbalanced regression and cascades separately. Audit uncertainty proxies offline with labels hidden from the proxy; implement a label-free sequential variant only after its assumptions are checked.
+- **Evaluation metric:** False-alarm probability in null replays, missed violations, detection delay in elderly observations and total arrivals, and absolute elderly error. Report proxy high-error recall separately from sequential test validity. Keep raw MAE descriptive; use a bounded binary event for the risk test.
+- **Thesis connection:** Tests whether subgroup failure hidden by global MAE becomes visible earlier, and whether simpler regression is also easier to monitor reliably.
+- **Risk or limitation:** Sparse elderly cases, dependent observations, label delay, and proxy failure may prevent useful detection. Silence is inconclusive. Age 60 and ten-year underestimation from the daily note remain provisional choices, not verified thesis thresholds.
+
+中文：我把严重低估定义成有界事件，在统一误报预算与标签延迟下比较整体和老年组监控。代理诊断与顺序检验分开；老年样本不足或代理失效时，监控沉默不能支持安全结论。
+
+## 6. Research Function Chain / 研究链条
+
+**Diagnosis:** source-held-out residuals and fixed-mixture audits → **Explanation:** test composition, within-group difficulty, weighting strength, and routing as competing hypotheses → **Intervention:** validation-selected modest correction → **Monitoring:** distinguish distribution, adaptation-assumption, and risk signals → **Evaluation:** compare absolute elderly outcomes, uncertainty, and information budgets.
+
+The chain is strongest in diagnostic design. I have no new experiment establishing a mechanism or subgroup monitoring guarantee. 中文：当前最成熟的是诊断协议，机制解释、干预收益与监控有效性仍需实验支持。
 
 ## 7. Proposal Seed
 
-**English:**
+**English:** My thesis showed that historical facial age models can hide elderly underestimation behind acceptable average error, and that balancing or conditional routing can worsen reliability. I propose to study when an apparent reliability improvement represents a reproducible reduction in elderly error. I will first separate evaluation-mixture effects from within-group model differences across archives. I will then test partial balancing under controlled composition and image-quality shifts, retaining simple regression as a baseline. Finally, I will assess whether subgroup risk monitoring detects severe underestimation at a declared false-alarm and label budget. The intended contribution is an evaluation protocol that connects subgroup outcomes to the evidence needed to support them, including explicit cases where sparse labels, unstable rankings, or invalid uncertainty proxies prevent a reliable conclusion.
 
-My master's thesis showed that historical facial age models can achieve acceptable aggregate error while degrading sharply for elderly portraits, and that balancing or conditional routing can worsen this failure. I propose to study what target-domain evidence is sufficient to evaluate and improve subgroup reliability under archive shift. I will begin with source-held-out comparisons of simple regression, balanced training, and cascaded models, measuring elderly error and signed residuals alongside global performance. I will then test whether uncertainty in target summaries should limit reweighting strength, and whether a small checked target sample supports useful residual-risk auditing. All comparisons will declare their information budgets, separate development from evaluation, and report sparse-group uncertainty. The intended contribution is a reproducible protocol linking evidence availability to intervention choice, with explicit cases where additional labels, metadata, or a simpler model are needed before a reliability claim is justified.
+**中文：** 我的 thesis 显示，可接受的平均误差可能掩盖老年组低估，平衡与条件路由也可能加重失败。我计划研究表面上的可靠性改善何时对应可复现的老年误差下降：先跨档案区分评估组成与组内误差，再检验复合漂移下的部分平衡，最后在明确误报和标签预算下评估子群风险监控。目标是建立连接群体结果与证据要求的协议，并明确小样本、排序不稳或代理失效时不能得出哪些结论。
 
-**中文理解：**
+## 8. Read, Reject, Develop / 精读、取舍与下一步
 
-我的硕士研究发现，整体误差可接受时，老年人像仍可能明显退化，平衡训练和条件路由也可能加重失败。我计划研究跨档案来源变化下，需要哪些目标域证据才能评估并改善群体可靠性。首先比较简单回归、平衡模型和级联模型的老年组误差与残差，再检验摘要不确定性是否应限制加权强度，以及少量核验标签能否支持残差风险审计。所有实验明确证据预算，分离开发与测试，并报告小样本不确定性，形成连接证据可用性与干预选择的可复现协议。
+**Read next:** I revise the September 30 FOCUS/SAGE queue in light of the four new notes. My two deep-reading priorities are **How Much Can Reliability Drift Under a Fixed Confidence Distribution?** (October 2) for monitoring blind spots, and **On Continuous Monitoring of Risk Violations under Unknown Shift** (October 4) for the exact null, bounded loss, label timing, and subgroup error-budget requirements. Both are already daily-card recommendations. I create no cards in this synthesis; any subsequent work must respect the two-card weekly cap.
 
-## 8. Deep Reading and Topic Maps / 精读与主题图
+**Retain/defer:** FOCUS remains my benchmark-design reference; SAGE/GUARD and ACP remain conditional method references. I retain the multiplicity paper as a warning about insufficient evidence and the retraining paper as a later replay-design reference. This prioritization does not discard their unresolved checks.
 
-1. **Read first — FOCUS:** Verify dataset splitting, label harmonization, subgroup support, and calibration measures before translating the benchmark design. This is the existing daily note's recommended paper card and my first priority.
-2. **Read second — SAGE:** Verify the required summaries, outcome information, shift assumptions, and step-size selection before choosing an implementation. This is a weekly method-reading priority; any subsequent card remains within the two-card weekly cap.
+**Reject:** I reject treating smaller gaps as improvement, output queries as ground-truth labels, stable confidence as safety, or arbitrary archive order as real temporal evidence. I defer new backbones, full bilevel training, and online adaptation until the basic audit is feasible.
 
-**Deferred:** ACP full reading follows once target labels and the regression calibration design are feasible. I retain the earlier source-shortcut and label-provenance questions as background checks rather than expanding the immediate queue. I reject generic model-family leaderboard comparisons and unverified claims that balancing or auditing solves elderly reliability.
+**Develop next:** I first inventory predictions, age provenance, person/archive IDs, elderly counts, and available model variants. I then freeze the Rank 1 population weights and error definitions before inspecting test comparisons. If data access fails, I record that boundary rather than fabricate benchmark results.
 
-**Topic-map decision:** I made no edits. The existing distribution-shift, subgroup-error, and trustworthy-AI maps already cover masking, burden movement, and subgroup coverage. The candidate addition—matching intervention strength to available target evidence—has not been established by a new deep paper card. Governance and multimodal-authenticity maps receive no new supported structure from this reading. No deep cards were created in this run.
+中文：本周新增阅读后，我把两篇监控论文放到精读首位，FOCUS 保留为评估模板，SAGE 等方法待数据条件明确后再推进。下一步先核实已有预测和元数据，固定第一项实验协议，不直接扩大系统或模型复杂度。
 
-中文：先精读 FOCUS 的评估协议，再核对 SAGE 的信息需求。当前只保留候选概念，不更新主题图；精读确认后才考虑增加有证据支持的小节。
+## 9. Topic-Map Decision / 主题图决定
 
-## 9. Next Week Plan / 下一步
+I leave all topic maps unchanged. The candidate structure is **claim-specific subgroup evidence**, distinguishing evaluation composition, intervention support, and monitoring validity. No new deep card for this week's papers establishes it as a stable concept, as required by AGENTS.md. The existing maps already include hidden subgroup error and reliability monitoring; daily-note convergence alone does not justify promotion. Governance and multimodal authenticity receive no new supported structure.
 
-- [ ] Confirm recoverable predictions, archive IDs, person IDs, age-label provenance, and elderly sample counts before committing to the benchmark.
-- [ ] Draft one fixed source-held-out evaluation table for Rank 1; define groups and endpoints before inspecting test differences.
-- [ ] Deep-read FOCUS, then SAGE; create at most two cards only after checking the full papers.
-- [ ] Resolve source-to-protocol gaps: SAGE summary sufficiency, ACP sample splitting and group guarantees, and FOCUS subgroup sample support.
-- [ ] Revisit this same partial-week report when additional September 28–October 4 notes arrive, rather than duplicate the window in a new report.
-
-中文：我下一步先核实数据可用性并固定评估协议，再决定方法扩展。若本周出现新笔记，我会补充本报告，避免把同一周重复编号。
+中文：我保留“针对具体结论的子群证据”作为候选结构，但没有新精读卡确认，因此不更新主题图，也不重写已有内容。
 
 ## 10. Weekly Reflection / 每周反思
 
-**English:**
+**English:** I am becoming a researcher who asks both where models fail unevenly and what evidence makes that failure measurable, reproducible, and detectable. This week makes my PhD direction narrower: begin with historical age predictions, separate population choices from model behavior, and test monitoring only against a clearly defined risk. My thesis supplies concrete failures, not a license to assume their causes. A useful contribution may be showing precisely when a seemingly fairer model or quieter monitor does not support a stronger reliability claim.
 
-This short reading window makes my research direction more concrete without settling its mechanisms. I am becoming a researcher who asks what evidence supports a subgroup reliability claim, how that evidence changes under shift, and which intervention it can justify. My thesis gives me an empirical starting point; the immediate task is to make its model comparisons reproducible across sources. I will keep representation and routing hypotheses alive, while letting held-out evidence determine whether they explain elderly degradation.
-
-**中文：**
-
-这次阅读让我的研究方向更具体，但并未确定失败机制。我正在成为一名关注群体可靠性证据的研究者：一个结论由什么证据支持，这些证据在分布变化下是否仍然成立，又能支持多强的干预？我的硕士论文提供了起点，当前最重要的是建立可复现的跨来源比较。我会继续检验表征与路由假设，同时让独立评估决定它们能否解释老年组退化。
+**中文：** 我正在成为一名同时研究“不均匀失败”和“支持失败结论的证据”的研究者。本周让我进一步收窄博士方向：从已有历史年龄预测出发，区分总体选择与模型行为，再围绕明确风险检验监控。Thesis 提供具体问题，而不是现成的因果解释。我的贡献可以是清楚说明：看似更公平的模型或更安静的监控，什么时候并不足以支持更强的可靠性结论。
